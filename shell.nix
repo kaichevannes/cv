@@ -13,6 +13,8 @@ pkgs.mkShell {
         xcolor
         soul
         lm
+        titlesec
+        pgf
         ;
     })
   ];

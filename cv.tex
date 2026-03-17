@@ -5,6 +5,21 @@
 \usepackage{xcolor}
 \usepackage{soul}
 \usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{tikz}
+
+\newcommand{\dashedline}{%
+  \begin{tikzpicture}
+    \pgfmathsetmacro{\dashpt}{3}% dash length in pt
+    \pgfmathsetmacro{\totalpt}{\linewidth / 1pt}%
+    \pgfmathtruncatemacro{\ndashes}{round(\totalpt / (2 * \dashpt))}%
+    \pgfmathsetmacro{\gappt}{(\totalpt - \ndashes * \dashpt) / (\ndashes - 1)}%
+    \draw[line width=0.4pt, dash pattern=on \dashpt pt off \gappt pt]
+    (0,0) -- (\linewidth, 0);
+  \end{tikzpicture}%
+}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{-0.7em}\dashedline]
+\titlespacing*{\section}{0pt}{1em}{0.5em}
 
 \definecolor{primary}{HTML}{007A5E}
 \definecolor{background}{HTML}{F1EEE4}
@@ -14,9 +29,19 @@
 % \pagecolor{background}
 \setulcolor{primary}
 
+\setlength{\parindent}{0pt}
+
+\makeatletter
+\def\verbatim@font{\small\normalfont\ttfamily}
+\makeatother
+
 \begin{document}
 
-\noindent{\LARGE \textbf{Kai Chevannes}} \hfill 07593 608555
+{
+  \setlength{\parfillskip}{0pt}
+  \hspace*{-0.03em}\noindent{\LARGE \textbf{Kai Chevannes}}
+  \hfill+44 7593 608555\hspace*{-0.02em}\par
+}
 \vspace{0.3em}
 \hrule
 \vspace{0.5em}
@@ -28,9 +53,24 @@
 \hspace{0.2em}{\Large{$\cdot$}}\hspace{0.2em}
 \textbf{GitHub} \link{https://github.com/kaichevannes}{github.com/kaichevannes}
 
-\section*{Experience}
+\section*{\hspace*{-0.01em}Experience}
+\textbf{Power Platform Developer} \hfill Oct 2025--Present \\
+\hspace*{-0.02em}\textit{Malooba}
+\begin{verbatim}
+$ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+$ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+$ Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+\end{verbatim}
 
-\section*{Education}
+\hspace*{-0.01em}\textbf{Summer Intern} \hfill Jun 2023--Aug 2023\\
+\hspace*{-0.12em}\textit{Thought Quarter}
+\begin{verbatim}
+$ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+$ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+$ Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+\end{verbatim}
+
+\section*{\hspace*{-0.01em}Education}
 
 \section*{Skills}
 
