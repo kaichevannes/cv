@@ -15,6 +15,7 @@ pkgs.mkShell {
         lm
         titlesec
         pgf
+        etoolbox
         ;
     })
   ];
