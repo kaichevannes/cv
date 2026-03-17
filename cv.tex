@@ -1,11 +1,32 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{lmodern}
+
+\definecolor{primary}{HTML}{007A5E}
+\definecolor{background}{HTML}{F1EEE4}
+
+\newcommand{\link}[2]{\href{#1}{\ul{#2}}}
+
+% \pagecolor{background}
+\setulcolor{primary}
 
 \begin{document}
 
-\begin{center}
-	{\Large \textbf{Kai Chevannes}}\\[0.5em]
-	kaichevannes.com
-\end{center}
+\noindent{\LARGE \textbf{Kai Chevannes}} \hfill 07593 608555
+\vspace{0.3em}
+\hrule
+\vspace{0.5em}
+
+\noindent
+\textbf{Email} \link{mailto:hello@kaichevannes.com}{hello@kaichevannes.com}
+\hspace{0.2em}{\Large{$\cdot$}}\hspace{0.2em}
+\textbf{Portfolio} \link{https://kaichevannes.com}{kaichevannes.com}
+\hspace{0.2em}{\Large{$\cdot$}}\hspace{0.2em}
+\textbf{GitHub} \link{https://github.com/kaichevannes}{github.com/kaichevannes}
 
 \section*{Experience}
 

@@ -8,6 +8,11 @@ pkgs.mkShell {
       inherit (pkgs.texlive)
         scheme-basic
         latexmk
+        geometry
+        hyperref
+        xcolor
+        soul
+        lm
         ;
     })
   ];
