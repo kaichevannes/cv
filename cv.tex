@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{article}
 
-\usepackage[margin=1.5cm]{geometry}
+\usepackage[margin=2.5cm]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xcolor}
 \usepackage{soul}
@@ -8,24 +8,34 @@
 \usepackage{titlesec}
 \usepackage{tikz}
 \usepackage{etoolbox}
+\usepackage{tcolorbox}
 
+\pagenumbering{gobble}
 \AtBeginEnvironment{verbatim}{\vspace{-0.5em}}
 
-\newcommand{\dashedline}{%
+\definecolor{primary}{HTML}{007A5E}
+\definecolor{background}{HTML}{F1EEE4}
+\definecolor{langcolor}{HTML}{D6EBE4}   % light green
+\definecolor{toolcolor}{HTML}{D9DEE8}   % light blue-grey
+
+\newcommand{\skillpill}[2]{
+  \tikz[baseline=(text.base)]{
+    \node[rounded corners=3pt, inner sep=3pt, fill=#2] (text) {\small #1};
+  }\hspace{2pt}
+}
+
+\newcommand{\dashedline}{
   \begin{tikzpicture}
     \pgfmathsetmacro{\dashpt}{3}% dash length in pt
     \pgfmathsetmacro{\totalpt}{\linewidth / 1pt}%
-    \pgfmathtruncatemacro{\ndashes}{round(\totalpt / (2 * \dashpt))}%
-    \pgfmathsetmacro{\gappt}{(\totalpt - \ndashes * \dashpt) / (\ndashes - 1)}%
+    \pgfmathtruncatemacro{\ndashes}{round(\totalpt / (2 * \dashpt))}
+    \pgfmathsetmacro{\gappt}{(\totalpt - \ndashes * \dashpt) / (\ndashes - 1)}
     \draw[line width=0.4pt, dash pattern=on \dashpt pt off \gappt pt]
     (0,0) -- (\linewidth, 0);
   \end{tikzpicture}%
 }
 \titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{-0.7em}\dashedline]
 \titlespacing*{\section}{0pt}{1em}{0.5em}
-
-\definecolor{primary}{HTML}{007A5E}
-\definecolor{background}{HTML}{F1EEE4}
 
 \newcommand{\link}[2]{\href{#1}{\ul{#2}}}
 
@@ -50,40 +60,50 @@
 \vspace{0.5em}
 
 \noindent
-\textbf{Email} \link{mailto:hello@kaichevannes.com}{hello@kaichevannes.com}
-\hspace{0.2em}{\Large{$\cdot$}}\hspace{0.2em}
 \textbf{Portfolio} \link{https://kaichevannes.com}{kaichevannes.com}
 \hspace{0.2em}{\Large{$\cdot$}}\hspace{0.2em}
-\textbf{GitHub} \link{https://github.com/kaichevannes}{github.com/kaichevannes}
+\textbf{GitHub} \link{https://github.com/kaichevannes}{kaichevannes}
+\hspace{0.2em}{\Large{$\cdot$}}\hspace{0.2em}
+\textbf{Email} \link{mailto:hello@kaichevannes.com}{hello@kaichevannes.com}
 
 \section*{\hspace*{-0.01em}Experience}
 \textbf{Power Platform Developer} \hfill Oct 2025--Present \\
 \hspace*{-0.02em}\textit{Malooba}
 \begin{verbatim}
-$ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-$ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-$ Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+$ Build Power Automate flows to extract device and vehicle data into Dataverse.
+$ Manage ALM deployments of Power Platform solutions from dev to test and prod.
 \end{verbatim}
 
 \hspace*{-0.01em}\textbf{Summer Intern} \hfill Jun 2023--Aug 2023\\
 \hspace*{-0.12em}\textit{Thought Quarter}
 \begin{verbatim}
-$ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-$ Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-$ Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+$ QA website testing using BrowserStack.
+$ Build an AWS Lambda triggered by a webhook to detect Umbraco, ASP.NET,
+  WordPress from HTML and headers, auto-tag CRM entries with tech stack.
+$ Write a Python script to clean CRM data by removing duplicate entries.
 \end{verbatim}
 
 \section*{\hspace*{-0.01em}Education}
 \textbf{BSc Computer Science, First Class Honours} \hfill 2021--2024 \\
-\textit{University of Southampton}
-\begin{verbatim}
-$ Netcraft Prize - Top 10 part one student
-\end{verbatim}
+\hspace*{-0.16em}\textit{University of Southampton} \\
 
 \textbf{A Levels: Computer Science, Maths, Further Maths (A*A*A*)}
 \hfill 2019--2021\\
-\textit{Callywith College, Bodmin}
+\hspace*{-0.11em}\textit{Callywith College, Bodmin}
 
-\section*{Skills}
+\section*{\hspace*{-0.02em}Skills}
+\begin{tcolorbox}[
+    colback=black!3,
+    colframe=black!15,
+    boxrule=0.4pt,
+    arc=4pt,
+    left=6pt, right=6pt, top=6pt, bottom=6pt
+  ]
+  \skillpill{Python}{langcolor}\skillpill{TypeScript}{langcolor}\skillpill{Rust}{langcolor}\skillpill{C\#}{langcolor}\skillpill{SQL}{langcolor}\skillpill{HTML}{langcolor}\skillpill{CSS}{langcolor}
+
+  \vspace{0.3em}
+  \skillpill{React}{toolcolor}\skillpill{Next.js}{toolcolor}\skillpill{Docker}{toolcolor}\skillpill{Kubernetes}{toolcolor}\skillpill{Power
+  Automate}{toolcolor}\skillpill{Dataverse}{toolcolor}\skillpill{AWS}{toolcolor}\skillpill{Git}{toolcolor}\skillpill{Linux}{toolcolor}
+\end{tcolorbox}
 
 \end{document}

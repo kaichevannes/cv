@@ -16,6 +16,8 @@ pkgs.mkShell {
         titlesec
         pgf
         etoolbox
+        tcolorbox
+        environ
         ;
     })
   ];
