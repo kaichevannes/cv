@@ -15,8 +15,11 @@
 
 \definecolor{primary}{HTML}{007A5E}
 \definecolor{background}{HTML}{F1EEE4}
-\definecolor{langcolor}{HTML}{D6EBE4}   % light green
-\definecolor{toolcolor}{HTML}{D9DEE8}   % light blue-grey
+
+\definecolor{langcolor}{HTML}{D9E5F0}      % blue
+\definecolor{frameworkcolor}{HTML}{D9ECE0}  % green
+\definecolor{platformcolor}{HTML}{F0E4D2}  % amber
+\definecolor{devopscolor}{HTML}{EADAE2}    % mauve
 
 \newcommand{\skillpill}[2]{
   \tikz[baseline=(text.base)]{
@@ -92,18 +95,32 @@ $ Write a Python script to clean CRM data by removing duplicate entries.
 \hspace*{-0.11em}\textit{Callywith College, Bodmin}
 
 \section*{\hspace*{-0.02em}Skills}
-\begin{tcolorbox}[
-    colback=black!3,
-    colframe=black!15,
-    boxrule=0.4pt,
-    arc=4pt,
-    left=6pt, right=6pt, top=6pt, bottom=6pt
-  ]
-  \skillpill{Python}{langcolor}\skillpill{TypeScript}{langcolor}\skillpill{Rust}{langcolor}\skillpill{C\#}{langcolor}\skillpill{SQL}{langcolor}\skillpill{HTML}{langcolor}\skillpill{CSS}{langcolor}
+\begin{tabular}{@{} r p{0.82\linewidth}}
+  \textbf{Languages} &
+  \skillpill{Python}{langcolor}
+  \skillpill{Rust}{langcolor}
+  \skillpill{TypeScript}{langcolor}
+  \skillpill{SQL}{langcolor}
+  \skillpill{HTML}{langcolor}
+  \skillpill{CSS}{langcolor}
+  \\[0.5em]
 
-  \vspace{0.3em}
-  \skillpill{React}{toolcolor}\skillpill{Next.js}{toolcolor}\skillpill{Docker}{toolcolor}\skillpill{Kubernetes}{toolcolor}\skillpill{Power
-  Automate}{toolcolor}\skillpill{Dataverse}{toolcolor}\skillpill{AWS}{toolcolor}\skillpill{Git}{toolcolor}\skillpill{Linux}{toolcolor}
-\end{tcolorbox}
+  \textbf{Frameworks} &
+  \skillpill{React}{frameworkcolor}
+  \skillpill{Next.js}{frameworkcolor}
+  \\[0.5em]
+
+  \textbf{Platforms} &
+  \skillpill{Power Platform}{platformcolor}
+  \skillpill{Azure}{platformcolor}
+  \\[0.5em]
+
+  \textbf{DevOps} &
+  \skillpill{Git}{devopscolor}
+  \skillpill{Linux}{devopscolor}
+  \skillpill{Nix}{devopscolor}
+  \skillpill{Docker}{devopscolor}
+  \skillpill{Kubernetes}{devopscolor}
+\end{tabular}
 
 \end{document}
