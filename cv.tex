@@ -19,7 +19,7 @@
 \definecolor{langcolor}{HTML}{D9E5F0}      % blue
 \definecolor{frameworkcolor}{HTML}{D9ECE0}  % green
 \definecolor{platformcolor}{HTML}{F0E4D2}  % amber
-\definecolor{devopscolor}{HTML}{EADAE2}    % mauve
+\definecolor{infrastructurecolor}{HTML}{EADAE2}    % mauve
 
 \newcommand{\skillpill}[2]{
   \tikz[baseline=(text.base)]{
@@ -77,8 +77,8 @@ $ Build Power Automate cloud and desktop flows to centralise device and
   vehicle data in Dataverse.
 $ Build a batch upsert cloud flow using the Dataverse Web API, reducing
   import times from one hour to 20 seconds.
-$ Resolve ALM deployment issues across dev, test and prod environments,
-  automating post-deployment ownership to embed connections in desktop flows.
+$ Manage ALM deployments across dev, test and prod environments, automating
+  connection ownership for desktop flows.
 \end{verbatim}
 
 \hspace*{-0.01em}\textbf{Summer Intern} \hfill Jun 2023--Aug 2023\\
@@ -99,22 +99,23 @@ $ Write a Python script to remove duplicate Pipedrive records using its API.
 \hspace*{-0.11em}\textit{Callywith College, Bodmin}
 
 \section*{Projects}
-\textbf{Portfolio}\\
-Originally built with React/Next.js, hosted on an
-Oracle VM using Docker and Kubernetes. Rewritten in vanilla HTML/CSS/JS and
-hosted on Cloudflare Pages.
+\textbf{Portfolio}
+\begin{verbatim}
+$ Originally built with React/Next.js, hosted on an Oracle VM using
+  Docker and Kubernetes.
+$ Rewritten in vanilla HTML/CSS/JS and hosted on Cloudflare Pages.
+\end{verbatim}
 
-\vspace{0.5em}
+\textbf{Web Boids}
+\begin{verbatim}
+$ Multithreaded boids algorithm in Rust, compiled to WebAssembly.
+\end{verbatim}
 
-\textbf{Web Boids}\\
-Implemented the boids algorithm in Rust with multithreading, compiled
-to WebAssembly.
-
-\vspace{0.5em}
-
-\textbf{NixOS} \\
-Declarative system configuration and dev environment using NixOS and
-Home Manager, stored in Git.
+\textbf{NixOS}
+\begin{verbatim}
+$ Declarative system configuration and dev environment using NixOS and
+  Home Manager.
+\end{verbatim}
 
 \section*{\hspace*{-0.02em}Skills}
 \begin{tabular}{@{} p{8em} p{0.72\linewidth}}
@@ -138,12 +139,12 @@ Home Manager, stored in Git.
   \skillpill{Azure}{platformcolor}
   \\[0.5em]
 
-  \textbf{DevOps} &
-  \skillpill{Git}{devopscolor}
-  \skillpill{Linux}{devopscolor}
-  \skillpill{Nix}{devopscolor}
-  \skillpill{Docker}{devopscolor}
-  \skillpill{Kubernetes}{devopscolor}
+  \textbf{Infrastructure} &
+  \skillpill{Git}{infrastructurecolor}
+  \skillpill{Linux}{infrastructurecolor}
+  \skillpill{Nix}{infrastructurecolor}
+  \skillpill{Docker}{infrastructurecolor}
+  \skillpill{Kubernetes}{infrastructurecolor}
 \end{tabular}
 
 \end{document}
